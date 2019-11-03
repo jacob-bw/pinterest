@@ -1,0 +1,30 @@
+{
+  "board1": {
+    "id" : "board1",
+    "name": "rural retrofuturism",
+    "private": "true",
+    "uid": "x9GwjNtqiCV7aEg2hqlDmyo5r6n2",
+    "description": "a collection of various images of sci-fi futures in the country"
+  },
+  "board2": {
+    "id" : "board2",
+    "name": "sick dragons",
+    "private": "true",
+    "uid": "x9GwjNtqiCV7aEg2hqlDmyo5r6n2",
+    "description": "pics of cool dragons"
+  },
+  "board3": {
+    "id" : "board3",
+    "name": "baked goods",
+    "private": "true",
+    "uid": "x9GwjNtqiCV7aEg2hqlDmyo5r6n2",
+    "description": "good proof, good structure, good crumb, well baked"
+  },
+  "board4": {
+    "id" : "board4",
+    "name": "not my board",
+    "private": "true",
+    "uid": "12345",
+    "description": "a dummy object to make sure our query is working correctly"
+  }
+}
