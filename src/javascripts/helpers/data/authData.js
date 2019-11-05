@@ -9,12 +9,12 @@ const boardsDiv = $('#boards');
 const loginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      boardsDiv.removeClass('hide');
       authDiv.addClass('hide');
+      boardsDiv.removeClass('hide');
       logoutButton.removeClass('hide');
     } else {
-      boardsDiv.addClass('hide');
       authDiv.removeClass('hide');
+      boardsDiv.addClass('hide');
       logoutButton.addClass('hide');
     }
   });
