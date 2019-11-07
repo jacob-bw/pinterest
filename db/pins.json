@@ -1,50 +1,43 @@
 {
   "pin1": {
-    "pinId": "pin1",
     "imgUrl": "https://www.thisiscolossal.com/wp-content/uploads/2015/05/simon-10.jpg",
     "siteUrl": "https://www.thisiscolossal.com/2015/05/simon-stalenhag-retro-sci-fi/",
     "description": "a painting by Simon Stålenhag from the book Tales from the Loop, describing an alternate timeline",
     "boardId": "board1"
   },
   "pin2": {
-    "pinId": "pin2",
     "imgUrl": "http://www.annestokes.com/wpimages/b0f2a7d995f9.jpg",
     "siteUrl": "http://www.annestokes.com/ageofdragons.html",
     "description": "what a majestic moonlit creature",
     "boardId": "board2"
   },
   "pin3": {
-    "pinId": "pin3",
     "imgUrl": "https://www.kingarthurflour.com/sites/default/files/styles/featured_image/public/blog-featured/Stenciling-21_0.jpg?itok=EPqGIBOV",
     "siteUrl": "https://www.kingarthurflour.com/blog/2016/08/10/artisan-bread-stenciling",
     "description": "Artisan Bread Stenciling - Five Simple Steps for Beautiful Designs",
     "boardId": "board3"
   },
   "pin4": {
-    "pinId": "pin4",
     "imgUrl": "https://www.thisiscolossal.com/wp-content/uploads/2015/05/simon-7.png",
     "siteUrl": "https://www.thisiscolossal.com/2015/05/simon-stalenhag-retro-sci-fi/",
     "description": "a painting by Simon Stålenhag from the book Tales from the Loop, describing an alternate timeline",
     "boardId": "board1"
   },
   "pin5": {
-    "pinId": "pin5",
     "imgUrl": "http://discovermagazine.com/~/media/Images/Issues/2013/December/dragon-science.jpg",
     "siteUrl": "http://discovermagazine.com/2013/dec/20-how-to-explain-your-dragon",
     "description": "A most specially greedy, strong and wicked worm",
     "boardId": "board2"
   },
   "pin6": {
-    "pinId": "pin6",
     "imgUrl": "http://crumbsofcapel.co.uk/wordpress/wp-content/uploads/2011/12/P1030088-Medium.jpg",
     "siteUrl": "https://crumbsofcapel.co.uk/products/speciality-bread/",
     "description": "Harvest Loaf - This is a very labour intensive bread and very large",
     "boardId": "board3"
   },
   "pin7": {
-    "pinId": "pinTest",
     "imgUrl": "",
-    "siteUrl": "",
+    "siteUrl": "google.com",
     "description": "",
     "boardId": "board4"
   }
