@@ -14,7 +14,6 @@ const getBoards = () => new Promise((resolve, reject) => {
         boards.push(demBoards[fbId]);
       });
       resolve(boards);
-      console.log(boards);
     })
     .catch((error) => reject(error));
 });
