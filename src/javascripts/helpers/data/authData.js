@@ -3,6 +3,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import allBoards from '../../components/boards/boards';
 
+
 const authDiv = $('#auth');
 const logoutButton = $('#navbarLogoutButton');
 const boardsDiv = $('#boards');
