@@ -15,34 +15,15 @@ const showAllBoards = (uid) => {
         domString += `
         <div class="card col-4" id="${board.id}">
           <p>${board.description}</p>
-          <button class="btn btn-primary expandBoard">View Full Board</button>
+          <button type="button" class="btn btn-primary expandBoard" id="${board.id}" data-toggle="modal" data-target="#exampleModal">View Full Board</button>
         </div>
         `;
         domString += '</div>';
       });
       utilities.printToDom('boards', domString);
-      $('.myBoards').on('click', '.expandBoard', pinData.sortPinsByBoardId);
+      $('.myBoards').on('click', '.expandBoard', pinData.getboardId);
     })
     .catch((error) => console.error(error));
 };
 
-const printPinsToBoards = (pinBoardId) => {
-  pinData.sortPinsByBoardId(pinBoardId)
-    .then((pins) => {
-      let domString = '';
-      domString += '<div class="card"></div>';
-      pins.forEach((pin) => {
-        domString += `<div class="card">
-          <div class="card-body">
-          <img src=${pin.imgUrl}></img>
-          </div>
-          </div>
-          `;
-      });
-      utilities.printToDom('pins', domString);
-    })
-    .catch((error) => console.error(error));
-};
-
-
-export default { showAllBoards, printPinsToBoards };
+export default { showAllBoards };
