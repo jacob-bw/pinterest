@@ -2,9 +2,15 @@ import $ from 'jquery';
 
 import boardsData from '../../helpers/data/boardsData';
 import utilities from '../../helpers/utilities';
-import pinData from '../../helpers/data/pinData';
+import singleboard from '../singleBoard/singleBoard';
 
 import './boards.scss';
+
+
+const getboardId = (e) => {
+  const boardId = e.target.id;
+  singleboard.printPinsToSingleBoard(boardId);
+};
 
 const showAllBoards = (uid) => {
   boardsData.getBoardsById(uid)
@@ -21,7 +27,7 @@ const showAllBoards = (uid) => {
         domString += '</div>';
       });
       utilities.printToDom('boards', domString);
-      $('.myBoards').on('click', '.expandBoard', pinData.getboardId);
+      $('.myBoards').on('click', '.expandBoard', getboardId);
     })
     .catch((error) => console.error(error));
 };

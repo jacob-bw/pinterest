@@ -5,7 +5,7 @@ import logout from './components/myNavbar/myNavbar';
 import loggedin from './helpers/data/authData';
 import boards from './components/boards/boards';
 import apiKeys from './helpers/data/apiKeys.json';
-// import singleBoard from './components/singleBoard/singleBoard';
+import singleBoard from './components/singleBoard/singleBoard';
 
 import '../styles/main.scss';
 
@@ -15,6 +15,7 @@ const init = () => {
   logout.logoutEvent();
   loggedin.loginStatus();
   boards.showAllBoards();
+  singleBoard.printPinsToSingleBoard();
 };
 
 init();

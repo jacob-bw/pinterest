@@ -7,22 +7,16 @@ const sortPinsByBoardId = (boardId) => new Promise((resolve, reject) => {
   axios.get(`${baseurl}/pins.json?orderBy="boardId"&equalTo="${boardId}"`)
     .then((response) => {
       const allPins = response.data;
-      console.log(allPins);
       const pins = [];
       Object.keys(allPins).forEach((fbId) => {
         allPins[fbId].id = fbId;
         pins.push(allPins[fbId]);
       });
       resolve(pins);
+      console.log('these are the pins for', boardId, pins);
     })
     .catch((error) => reject(error));
-  console.log(boardId);
 });
 
-const getboardId = (e) => {
-  const boardId = e.target.id;
-  console.log('this should be the board id for the button clicked', boardId);
-  sortPinsByBoardId(boardId);
-};
 
-export default { sortPinsByBoardId, getboardId };
+export default { sortPinsByBoardId };
