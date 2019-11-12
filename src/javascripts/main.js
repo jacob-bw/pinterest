@@ -4,9 +4,8 @@ import auth from './components/Auth/auth';
 import logout from './components/myNavbar/myNavbar';
 import loggedin from './helpers/data/authData';
 import boards from './components/boards/boards';
-import boardsData from './helpers/data/boardsData';
-
 import apiKeys from './helpers/data/apiKeys.json';
+import singleBoard from './components/singleBoard/singleBoard';
 
 import '../styles/main.scss';
 
@@ -15,8 +14,9 @@ const init = () => {
   auth.loginButton();
   logout.logoutEvent();
   loggedin.loginStatus();
-  boardsData.getBoards();
+  boards.closeBoard();
   boards.showAllBoards();
+  singleBoard.printPinsToSingleBoard();
 };
 
 init();
