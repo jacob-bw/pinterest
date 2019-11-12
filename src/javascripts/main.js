@@ -14,6 +14,7 @@ const init = () => {
   auth.loginButton();
   logout.logoutEvent();
   loggedin.loginStatus();
+  boards.closeBoard();
   boards.showAllBoards();
   singleBoard.printPinsToSingleBoard();
 };
