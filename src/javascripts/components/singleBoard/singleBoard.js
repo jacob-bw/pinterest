@@ -36,6 +36,7 @@ const printPinsToSingleBoard = (boardId) => {
             <div class="card-body">
               <img src=${pin.imgUrl}></img>
               <p>${pin.description}</p>
+              <button class="btn btn-warning deletePin" id="deletePinButton">Delete Pin</button>
               </div>
            </div> 
           `;

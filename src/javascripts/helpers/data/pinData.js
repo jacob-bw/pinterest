@@ -18,5 +18,7 @@ const sortPinsByBoardId = (boardId) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+const deletePinById = (pinIdToDelete) => axios.delete(`${baseurl}/pins/${pinIdToDelete}.json`);
 
-export default { sortPinsByBoardId };
+
+export default { sortPinsByBoardId, deletePinById };

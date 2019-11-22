@@ -47,17 +47,12 @@ const closeBoard = () => {
 };
 
 const deleteBoard = (e) => {
-  // e.preventDefault();
-  console.log('hoooboy');
-  // authenticate user
   const { uid } = firebase.auth().currentUser;
-  // function that calls 'deleteBoardById' from boardsData.js
   boardsData.deleteBoardById(e.target.id)
     .then(() => {
       showAllBoards(uid);
     })
     .catch((error) => console.error(error));
-  // re-prints db data without deleted board
 };
 
 const printPinsToSingleBoard = (boardId) => {
@@ -74,7 +69,7 @@ const printPinsToSingleBoard = (boardId) => {
             <div class="card-body">
               <img src=${pin.imgUrl}></img>
               <p>${pin.description}</p>
-              <button class="btn btn-light deletePinButton">Delete Pin</button>
+              <button class="btn btn-warning deletePin" id="deletePinButton">Delete Pin</button>
               </div>
            </div> 
           `;
