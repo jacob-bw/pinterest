@@ -6,14 +6,10 @@ import 'firebase/auth';
 import pinData from '../../helpers/data/pinData';
 import boardsData from '../../helpers/data/boardsData';
 import utilities from '../../helpers/utilities';
-// import singleboard from '../singleBoard/singleBoard';
-
 
 import './boards.scss';
 
-
 const getboardId = (e) => {
-  console.log('getboardid running');
   const boardId = e.target.id;
   // eslint-disable-next-line no-use-before-define
   printPinsToSingleBoard(boardId);
@@ -50,19 +46,30 @@ const closeBoard = () => {
   });
 };
 
+const deleteBoard = (e) => {
+  const { uid } = firebase.auth().currentUser;
+  boardsData.deleteBoardById(e.target.id)
+    .then(() => {
+      showAllBoards(uid);
+    })
+    .catch((error) => console.error(error));
+};
+
 const printPinsToSingleBoard = (boardId) => {
-  console.log('boards.js');
   pinData.sortPinsByBoardId(boardId)
     .then((pins) => {
       let domString = '';
       domString += '<div class="card">';
-      domString += '<button class="btn btn-dark closeBoard" id="closeBoardButton">Close Board</button></div>';
+      domString += '<button class="btn btn-dark col-md-3 closeBoard" id="closeBoardButton">Close Board</button>';
+      domString += `<button class="btn btn-dark col-md-3 deleteBoard" id="${boardId}">Delete Board</button>`;
+      domString += '</div>';
       pins.forEach((pin) => {
         domString += `
           <div class="card">
             <div class="card-body">
               <img src=${pin.imgUrl}></img>
               <p>${pin.description}</p>
+              <button class="btn btn-warning deletePin" id="deletePinButton">Delete Pin</button>
               </div>
            </div> 
           `;
@@ -70,6 +77,7 @@ const printPinsToSingleBoard = (boardId) => {
       utilities.printToDom('boards', domString);
       // eslint-disable-next-line no-undef
       $('.card').on('click', '#closeBoardButton', closeBoard);
+      $('.card').on('click', '.deleteBoard', deleteBoard);
     })
     .catch((error) => console.error(error));
 };
